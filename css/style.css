@@ -423,6 +423,15 @@ h1 {
   padding: 2rem 0 3rem;
 }
 
+/***swiperここから***/
+.swiper-wrapper {
+  height: 300px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #C58DA1;
+}
+
 /***ハンバーガーここから***/
 #navBtn {
   position: fixed;
