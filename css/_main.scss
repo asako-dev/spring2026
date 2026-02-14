@@ -1,0 +1,314 @@
+/* ---------------------
+    main.scss ここから
+  ---------------------*/
+@use "base"as base;
+
+// ブレイクポイント
+@mixin pc {
+    @media (min-width: 960px) {
+        @content;
+    }
+}
+// コンテンツここから
+a{
+    transition: 0.3s;
+    &:hover{
+        opacity: 0.7;
+   
+    }
+}
+
+.btn_more{
+    display: block;
+    transition: 0.3s;
+    @include pc{
+      max-width: 700px;
+      margin: auto;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
+header{
+    background: #fff;
+}
+
+h1 {
+        padding: 1rem;
+        width: 30%;
+}
+
+.prize{
+    padding: 5rem 0;
+}
+
+@mixin prize-style {
+  padding: 6rem 3rem;
+  background: #fff;
+  border-radius: 3rem;
+  border-top: solid 0.5rem base.$accent-color;
+  border-bottom: solid 0.5rem base.$accent-color;
+  position: relative;
+  margin-bottom: 5rem;
+
+    h2{
+        width: 60%;
+        margin: auto;
+    }
+    h3{
+        text-align: center;
+        margin: 2rem 0;
+    }
+    h5{
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    h6{
+        text-align: center;
+        font-size: 1.2rem;
+        a{
+            color: base.$sub-color;
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    .plus{
+        width: 3.5rem;
+        margin: 2rem auto;
+    }
+
+}
+
+.prize-best{
+    @include prize-style;
+
+}
+
+.prize-each{
+    @include prize-style;
+    padding: 4rem 3rem;
+    margin-bottom: 0;
+    h2{
+        width: 40%;
+    }
+}
+.prize-other{
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+    margin-bottom: 3rem;
+}
+
+
+.best-badge{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 7rem;
+}
+.other-badge{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 7rem;
+
+}
+
+
+@mixin best-list-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border-bottom: solid 1px #E5E5E5;
+    padding: 3rem 0;
+    dt{
+        flex: 4;
+    }
+    dd{
+        flex: 6;
+    }
+    &__atgrp{
+        padding-top: 2rem;
+     li{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        a{
+            color: base.$sub-color;
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+       }
+    }
+
+}
+.best-list{
+    @include best-list-style;
+}
+.best-list-no-border{
+    @include best-list-style;
+    border-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.prize-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.prize-price-best{
+    color: base.$price-color;
+    font-weight: bold;
+    font-size: 2rem;
+    span{
+        font-size: 36px;
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+}
+.prize-atn{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 3rem;
+}
+
+.application{
+    padding: 5rem 1rem;
+    border-radius: 3rem;
+    background: #fff;
+}
+.sub-title{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+.title-ex{
+    text-align: center;
+    padding: 2rem 0 3rem;
+}
+/***ハンバーガーここから***/
+#navBtn {
+    position: fixed;
+    z-index: 1000;
+}
+
+.cp_hmenuac03 .cp_bar,
+.cp_hmenuac03:before,
+.cp_hmenuac03:after {
+    display: block;
+    width: 30px;
+    height: 2px;
+    content: '';
+    transition: all 0.2s ease-in-out;
+    background: base.$sub-color;
+}
+
+.cp_hmenuac03 .cp_bar {
+    position: relative;
+    margin: 7px 0;
+}
+
+.cp_hmenuac03 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 100;
+}
+
+#navMenu {
+    height: 0;
+}
+
+#navMenu nav {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+#navMenu.show nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: base.$sub-color;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40%, 40%;
+    background-position: left top, right bottom;
+    z-index: 99;
+    transition: 0.2s;
+}
+
+#navMenu.show nav ul {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#navMenu nav ul {
+    display: none;
+}
+
+#navMenu nav ul li {
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+
+    &:last-of-type {
+        padding-top: 1rem;
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+#navMenu nav ul li:last-of-type {
+    border: 0;
+}
+
+#navMenu nav ul li a {
+    color: inherit;
+    display: block;
+    transition: 0.3s;
+}
+
+#navMenu nav ul li a:hover {
+    // color: #fff;
+    text-decoration: none;
+    opacity: 0.4;
+}
+
+.show .cp_hmenuac03 .cp_bar {
+    transform: scale(0);
+}
+
+.show .cp_hmenuac03:before {
+    transform: translateY(10px) rotate(135deg);
+    background-color: #fff;
+}
+
+.show .cp_hmenuac03:after {
+    transform: translateY(-8px) rotate(-135deg);
+    background-color:  #fff;
+}
+
+
+/***ハンバーガーここまで***/

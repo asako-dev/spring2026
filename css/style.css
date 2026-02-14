@@ -1,0 +1,542 @@
+@charset "UTF-8";
+/* ---------------------
+    reset.scss ここから
+  ---------------------*/
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------
+    reset.scss ここまで
+  ---------------------*/
+/* ---------------------
+    base.scss ここから
+  ---------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: #636363;
+  font-size: 1.4rem;
+  background: #FFEFF2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.sp {
+  display: block;
+}
+
+.pc {
+  display: none;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 93.75%;
+  }
+  body {
+    font-size: 18px;
+  }
+  .sp {
+    display: none;
+  }
+  .pc {
+    display: block;
+  }
+  .inner {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+/* ---------------------
+    base.scss ここまで
+  ---------------------*/
+/* ---------------------
+    main.scss ここから
+  ---------------------*/
+a {
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.btn_more {
+  display: block;
+  transition: 0.3s;
+}
+@media (min-width: 960px) {
+  .btn_more {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+.btn_more:hover {
+  opacity: 0.5;
+}
+
+header {
+  background: #fff;
+}
+
+h1 {
+  padding: 1rem;
+  width: 30%;
+}
+
+.prize {
+  padding: 5rem 0;
+}
+
+.prize-best {
+  padding: 6rem 3rem;
+  background: #fff;
+  border-radius: 3rem;
+  border-top: solid 0.5rem #C58DA1;
+  border-bottom: solid 0.5rem #C58DA1;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.prize-best h2 {
+  width: 60%;
+  margin: auto;
+}
+.prize-best h3 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.prize-best h5 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.prize-best h6 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.prize-best h6 a {
+  color: #76B8DE;
+  transition: 0.3s;
+}
+.prize-best h6 a:hover {
+  opacity: 0.5;
+}
+.prize-best .plus {
+  width: 3.5rem;
+  margin: 2rem auto;
+}
+
+.prize-each {
+  padding: 6rem 3rem;
+  background: #fff;
+  border-radius: 3rem;
+  border-top: solid 0.5rem #C58DA1;
+  border-bottom: solid 0.5rem #C58DA1;
+  position: relative;
+  margin-bottom: 5rem;
+  padding: 4rem 3rem;
+  margin-bottom: 0;
+}
+.prize-each h2 {
+  width: 60%;
+  margin: auto;
+}
+.prize-each h3 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.prize-each h5 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.prize-each h6 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.prize-each h6 a {
+  color: #76B8DE;
+  transition: 0.3s;
+}
+.prize-each h6 a:hover {
+  opacity: 0.5;
+}
+.prize-each .plus {
+  width: 3.5rem;
+  margin: 2rem auto;
+}
+.prize-each h2 {
+  width: 40%;
+}
+
+.prize-other {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.best-badge {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 7rem;
+}
+
+.other-badge {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 7rem;
+}
+
+.best-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: solid 1px #E5E5E5;
+  padding: 3rem 0;
+}
+.best-list dt {
+  flex: 4;
+}
+.best-list dd {
+  flex: 6;
+}
+.best-list__atgrp {
+  padding-top: 2rem;
+}
+.best-list__atgrp li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.best-list__atgrp li a {
+  color: #76B8DE;
+  transition: 0.3s;
+}
+.best-list__atgrp li a:hover {
+  opacity: 0.5;
+}
+
+.best-list-no-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: solid 1px #E5E5E5;
+  padding: 3rem 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.best-list-no-border dt {
+  flex: 4;
+}
+.best-list-no-border dd {
+  flex: 6;
+}
+.best-list-no-border__atgrp {
+  padding-top: 2rem;
+}
+.best-list-no-border__atgrp li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.best-list-no-border__atgrp li a {
+  color: #76B8DE;
+  transition: 0.3s;
+}
+.best-list-no-border__atgrp li a:hover {
+  opacity: 0.5;
+}
+
+.prize-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.prize-price-best {
+  color: #B22222;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.prize-price-best span {
+  font-size: 36px;
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
+
+.prize-atn {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-left: 3rem;
+}
+
+.application {
+  padding: 5rem 1rem;
+  border-radius: 3rem;
+  background: #fff;
+}
+
+.sub-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title-ex {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+/***ハンバーガーここから***/
+#navBtn {
+  position: fixed;
+  z-index: 1000;
+}
+
+.cp_hmenuac03 .cp_bar,
+.cp_hmenuac03:before,
+.cp_hmenuac03:after {
+  display: block;
+  width: 30px;
+  height: 2px;
+  content: "";
+  transition: all 0.2s ease-in-out;
+  background: #76B8DE;
+}
+
+.cp_hmenuac03 .cp_bar {
+  position: relative;
+  margin: 7px 0;
+}
+
+.cp_hmenuac03 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+}
+
+#navMenu {
+  height: 0;
+}
+
+#navMenu nav {
+  background: rgba(0, 0, 0, 0);
+}
+
+#navMenu.show nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #76B8DE;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40%, 40%;
+  background-position: left top, right bottom;
+  z-index: 99;
+  transition: 0.2s;
+}
+
+#navMenu.show nav ul {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#navMenu nav ul {
+  display: none;
+}
+
+#navMenu nav ul li {
+  display: inline-block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+#navMenu nav ul li:last-of-type {
+  padding-top: 1rem;
+}
+#navMenu nav ul li:last-of-type img {
+  width: 50%;
+}
+
+#navMenu nav ul li:last-of-type {
+  border: 0;
+}
+
+#navMenu nav ul li a {
+  color: inherit;
+  display: block;
+  transition: 0.3s;
+}
+
+#navMenu nav ul li a:hover {
+  text-decoration: none;
+  opacity: 0.4;
+}
+
+.show .cp_hmenuac03 .cp_bar {
+  transform: scale(0);
+}
+
+.show .cp_hmenuac03:before {
+  transform: translateY(10px) rotate(135deg);
+  background-color: #fff;
+}
+
+.show .cp_hmenuac03:after {
+  transform: translateY(-8px) rotate(-135deg);
+  background-color: #fff;
+}
+
+/***ハンバーガーここまで***/
+
+/*# sourceMappingURL=style.css.map */
