@@ -478,13 +478,13 @@ h1 {
 .works__img01 {
   position: absolute;
   bottom: -11rem;
-  left: -30px;
+  left: -40px;
   width: 18rem;
 }
 .works__img02 {
   position: absolute;
   bottom: -10rem;
-  right: -30px;
+  right: -50px;
   width: 28rem;
 }
 
@@ -544,6 +544,9 @@ h1 {
   padding: 3rem 2rem 0;
 }
 
+.attention {
+  margin-bottom: 7rem;
+}
 .attention .dropdown-list {
   padding-top: 0;
 }
@@ -553,6 +556,84 @@ h1 {
   border-radius: 10px;
   border-left: solid 5px #C58DA1;
   border-bottom: none;
+}
+
+footer {
+  background: #C58DA1;
+  color: #fff;
+  padding: 7rem 0;
+}
+footer .sns {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+footer .sns li {
+  width: 3rem;
+}
+footer h3 {
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+footer nav {
+  margin-bottom: 3rem;
+}
+footer nav ul {
+  text-align: center;
+}
+footer nav ul li {
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+footer nav ul li a {
+  transition: 0.3s;
+}
+footer nav ul li a:hover {
+  opacity: 0.5;
+}
+footer nav ul:first-of-type {
+  margin-bottom: 2.5rem;
+}
+
+#dl-area {
+  position: fixed;
+  bottom: 0;
+  z-index: 970;
+  width: 100%;
+  padding: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#dl-area.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dl-area-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dl-area-left {
+  flex: 1;
+}
+
+.dl-area-right {
+  flex: 4;
+  display: flex;
+}
+.dl-area-right li:first-of-type {
+  width: 45%;
+}
+.dl-area-right li:last-of-type {
+  width: 55%;
 }
 
 /***ハンバーガーここから***/

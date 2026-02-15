@@ -36,3 +36,18 @@ btn.forEach((elm) => {
     });
   });
 
+  // ふわっと表示
+window.addEventListener("load", function () {
+  const dlArea = document.getElementById("dl-area");
+
+  if (!dlArea) return;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      dlArea.classList.add("is-show");
+    } else {
+      dlArea.classList.remove("is-show");
+    }
+  });
+});
+
