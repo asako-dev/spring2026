@@ -27,4 +27,12 @@ btn.forEach((elm) => {
   });
 
 
+//アコーディオン
+  document.querySelectorAll('.accordion-trigger').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      btn.closest('.is-accordion').classList.toggle('is-open');
+    });
+  });
 
