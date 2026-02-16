@@ -212,6 +212,7 @@ h1 {
     border-radius: 30px;
     padding: 5rem 2rem;
     position: relative;
+    
     p{
         text-align: center;
         font-size: 2.2rem;
@@ -403,18 +404,16 @@ footer {
 .dl-area-right{
     flex:4;
     display: flex;
+    gap: 5px;
 
     li{
         &:first-of-type{
-        width: 45%;
+        width: 44.5%;
     }
     &:last-of-type{
-        width: 55%;
+        width: 55.5%;
     }
-
     }
-
-
 }
 
 /***ハンバーガーここから***/

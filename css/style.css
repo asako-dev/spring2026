@@ -628,12 +628,13 @@ footer nav ul:first-of-type {
 .dl-area-right {
   flex: 4;
   display: flex;
+  gap: 5px;
 }
 .dl-area-right li:first-of-type {
-  width: 45%;
+  width: 44.5%;
 }
 .dl-area-right li:last-of-type {
-  width: 55%;
+  width: 55.5%;
 }
 
 /***ハンバーガーここから***/
