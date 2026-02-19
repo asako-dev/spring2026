@@ -255,6 +255,11 @@ h1 {
   opacity: 0.5;
 }
 
+.what {
+  width: 80px;
+  margin-bottom: -15px;
+}
+
 @media (min-width: 960px) {
   .mv {
     background-image: url(../images/bg_pc.png);
@@ -390,6 +395,7 @@ h1 {
     max-width: 1300px;
     flex-direction: row;
     margin: auto;
+    justify-content: center;
   }
 }
 
@@ -578,17 +584,23 @@ h1 {
 }
 
 @media (min-width: 960px) {
-  .swiper {
-    overflow: visible !important;
-  }
   .swiper-wrapper {
     display: flex !important;
-    transform: none !important;
-    justify-content: space-between;
+    align-items: stretch !important;
+    justify-content: center;
+    gap: 30px;
   }
   .swiper-slide {
-    width: 30%;
-    margin-right: 0 !important;
+    width: 30% !important;
+    flex-shrink: 1 !important;
+    display: flex !important;
+    height: auto !important;
+  }
+  .howto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 }
 /***swiperここまで***/
