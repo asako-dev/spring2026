@@ -213,6 +213,15 @@ header {
 }
 
 @media (min-width: 960px) {
+  #prize,
+#application,
+#works,
+#result,
+#attention {
+    scroll-margin-top: 70px;
+  }
+}
+@media (min-width: 960px) {
   .top_nav {
     display: flex;
     justify-content: space-between;

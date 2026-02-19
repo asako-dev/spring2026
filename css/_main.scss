@@ -36,6 +36,17 @@ header {
 
 }
 
+@include pc {
+
+  #prize,
+  #application,
+  #works,
+  #result,
+  #attention {
+    scroll-margin-top: 70px;
+  }
+}
+
 .top_nav {
   @include pc {
     display: flex;
