@@ -388,11 +388,18 @@ h1 {
   background: base.$accent-color;
 }
 
+.swiper-wrapper {
+  align-items: stretch !important;
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto !important;
+}
+
 @include pc {
 
   .swiper-wrapper {
-    display: flex !important;
-    align-items: stretch !important;
     justify-content: center;
     gap: 30px;
   }
@@ -400,8 +407,6 @@ h1 {
   .swiper-slide {
     width: 30% !important;
     flex-shrink: 1 !important;
-    display: flex !important;
-    height: auto !important;
   }
 
   .howto {
@@ -416,6 +421,16 @@ h1 {
 
 /***swiperここまで***/
 
+
+
+// .howto {
+//   display: flex;
+//   flex-direction: column;
+//   flex: 1;
+// }
+
+
+
 .howto {
   width: 90%;
   margin: 3rem auto 0;
@@ -423,6 +438,9 @@ h1 {
   border-radius: 30px;
   padding: 5rem 2rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   @include pc {
     width: auto;
